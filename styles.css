@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+
+:root {
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --desaturated-dark-blue: hsl(214, 17%, 51%);
+  --grayish-blue: hsl(212, 23%, 69%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+}
+
+section {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--light-grayish-blue);
+}
+
+.container {
+  width: 60%;
+  height: auto;
+  display: flex;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.image-container {
+  width: 40%;
+  height: auto;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left;
+}
+
+.text-container {
+  width: 60%;
+  background-color: #fff;
+  padding: 35px 45px;
+}
+
+.text-container .post-title {
+  font-size: 25px;
+  color: var(--very-dark-grayish-blue);
+  padding-bottom: 15px;
+  line-height: 1.6;
+}
+
+.text-container .post-text {
+  font-size: 15px;
+  color: var(--desaturated-dark-blue);
+  padding-bottom: 20px;
+  line-height: 1.8;
+}
+
+.social-area {
+  display: flex;
+}
+
+.profile-image {
+  padding-right: 15px;
+}
+
+.profile-image img {
+  border-radius: 50%;
+  width: 40px;
+}
+
+.profile-text .profile-name {
+  color: var(--very-dark-grayish-blue);
+  font-weight: 700;
+  padding-bottom: 5px;
+}
+
+.profile-text .post-date {
+  color: var(--desaturated-dark-blue);
+  padding-bottom: 5px;
+}
+
+.tooltip {
+  margin-left: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.tooltip img {
+  padding: 15px;
+  border-radius: 50%;
+}
+
+.tooltip:hover img {
+  background-color: var(--light-grayish-blue);
+}
+
+.tooltip.active img {
+  background-color: var(--very-dark-grayish-blue);
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--very-dark-grayish-blue);
+  color: var(--light-grayish-blue);
+  text-align: center;
+  border-radius: 8px;
+  padding: 10px 20px;
+  position: absolute;
+  z-index: 1;
+  bottom: 41%;
+  left: 64.9%;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext .share-text {
+  color: var(--light-grayish-blue);
+  letter-spacing: 3px;
+  font-size: 18px;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -15px;
+  border-width: 15px;
+  border-style: solid;
+  border-color: var(--very-dark-grayish-blue) transparent transparent
+    transparent;
+}
+
+.tooltip .tooltiptext.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Attribution */
+
+.attribution {
+  position: absolute;
+  font-size: 11px;
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+  z-index: 1000;
+  color: var(--desaturated-dark-blue);
+}
+.attribution a {
+  color: var(--very-dark-grayish-blue);
+}
+
+@media (max-width: 798px) {
+  section {
+    height: 120%;
+  }
+  .container {
+    position: relative;
+    flex-direction: column;
+    width: 85%;
+  }
+
+  .image-container {
+    width: 100%;
+    object-position: top;
+  }
+
+  .text-container {
+    margin-top: -5px;
+    width: 100%;
+    padding: 30px 35px;
+  }
+
+  .text-container .post-title {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .text-container .post-text {
+    font-size: 13px;
+    color: var(--desaturated-dark-blue);
+    padding-bottom: 20px;
+    line-height: 1.6;
+  }
+
+  .tooltip img {
+    z-index: 100;
+  }
+
+  .tooltip .tooltiptext {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    border-radius: 0;
+    display: flex;
+    justify-content: left;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -15px;
+    border-width: 15px;
+    border-style: solid;
+    border-color: transparent transparent transparent transparent;
+  }
+}
