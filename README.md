@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub Repository](https://github.com/EugenCoda/frontend-mentor-article-preview-component)
-- Live Site URL: [Article Preview Component](article-preview-component-frontend-challenge.netlify.app)
+- Live Site URL: [Article Preview Component](https://article-preview-component-frontend-challenge.netlify.app/)
 
 ## My process
 
